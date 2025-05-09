@@ -1,0 +1,159 @@
+/**
+ * Bulk AI Alt Setter 管理画面用CSS
+ */
+
+/* 全体のスタイル */
+.baas-main-wrap {
+    max-width: 1200px;
+}
+
+.baas-intro {
+    margin: 20px 0;
+    background: #fff;
+    padding: 15px;
+    border-left: 4px solid #2271b1;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+/* オプション設定エリア */
+.baas-options {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.baas-option-row {
+    margin-bottom: 15px;
+}
+
+.baas-button-row {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* プレビューエリア */
+.baas-preview {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.baas-image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.baas-image-box {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+}
+
+.baas-image-box img {
+    max-width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: contain;
+}
+
+.baas-image-info {
+    font-size: 12px;
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 進捗バー */
+.baas-progress {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.baas-progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #f0f0f1;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.baas-progress-inner {
+    height: 100%;
+    background-color: #2271b1;
+    width: 0;
+    transition: width 0.3s;
+}
+
+.baas-progress-text {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* 結果表示エリア */
+.baas-results {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.baas-results-summary {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.baas-results-details {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* ステータス表示 */
+.baas-success {
+    color: #00a32a;
+    font-weight: bold;
+}
+
+.baas-error {
+    color: #d63638;
+    font-weight: bold;
+}
+
+.baas-skipped {
+    color: #aaa;
+    font-style: italic;
+}
+
+.baas-error-message {
+    font-size: 12px;
+    color: #d63638;
+    margin-top: 5px;
+}
+
+/* メディアライブラリ用 */
+.baas-alt-display {
+    position: relative;
+}
+
+.baas-success-message {
+    color: #00a32a;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+/* 設定画面 */
+.baas-settings-wrap {
+    max-width: 800px;
+}
