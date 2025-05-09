@@ -24,6 +24,7 @@ define( 'BAAS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 // 必要なファイルを読み込む
 require_once BAAS_PLUGIN_DIR . 'includes/class-baas-admin.php';
 require_once BAAS_PLUGIN_DIR . 'includes/class-baas-api.php';
+require_once BAAS_PLUGIN_DIR . 'includes/class-baas-auto-alt.php';
 
 /**
  * プラグインの初期化
@@ -32,6 +33,10 @@ function baas_init() {
 	// 管理画面の初期化
 	$admin = new BAAS_Admin();
 	$admin->init();
+
+	// 自動Alt設定機能の初期化
+	$auto_alt = new BAAS_Auto_Alt();
+	$auto_alt->init();
 
 	// 国際化対応
 	load_plugin_textdomain( 'bulk-ai-alt-setter', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
@@ -48,10 +53,6 @@ function baas_activate() {
 	// OpenAI APIのデフォルト設定
 	if ( ! get_option( 'baas_api_key' ) ) {
 		add_option( 'baas_api_key', '' );
-	}
-
-	if ( ! get_option( 'baas_ai_model' ) ) {
-		add_option( 'baas_ai_model', 'gpt-4' );
 	}
 }
 register_activation_hook( __FILE__, 'baas_activate' );
@@ -70,6 +71,5 @@ register_deactivation_hook( __FILE__, 'baas_deactivate' );
 function baas_uninstall() {
 	// アンインストール時の処理をここに書く
 	delete_option( 'baas_api_key' );
-	delete_option( 'baas_ai_model' );
 }
 register_uninstall_hook( __FILE__, 'baas_uninstall' );
