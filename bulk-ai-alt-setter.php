@@ -3,7 +3,7 @@
  * Plugin Name: Bulk AI Alt Setter
  * Plugin URI: https://example.com/bulk-ai-alt-setter
  * Description: AIを活用してメディアライブラリの画像に一括でalt属性を設定するプラグイン
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Bulk AI Alt Setter開発チーム
  * Author URI: https://example.com
  * Text Domain: bulk-ai-alt-setter
